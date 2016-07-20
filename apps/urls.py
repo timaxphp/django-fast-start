@@ -6,10 +6,7 @@ from django.views.generic.base import TemplateView
 
 from main.views import IndexView
 
-urlpatterns = patterns('',
-    # Examples:
+urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
-
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-)
+]
